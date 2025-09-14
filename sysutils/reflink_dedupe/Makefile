@@ -28,22 +28,23 @@ ZFS_DESC=            Enable support for zpool statistics monitoring in interacti
 
 
 do-install:
-	# Create required directories first
-	${MKDIR} ${STAGEDIR}/bin
-	${MKDIR} ${STAGEDIR}/etc/rc.d
-	${MKDIR} ${STAGEDIR}/etc/newsyslog.conf.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc  # optional if you install sample config under PREFIX
+	# Create staging directories
+	${MKDIR} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rc.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc
 
+	# Install files under ${PREFIX}
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
-	    ${STAGEDIR}/bin/reflink_dedupe
+		${STAGEDIR}${PREFIX}/bin/reflink_dedupe
 
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/reflink_dedupe \
-	    ${STAGEDIR}/etc/rc.d/reflink_dedupe
+		${STAGEDIR}${PREFIX}/etc/rc.d/reflink_dedupe
 
 	${INSTALL_DATA} ${WRKSRC}/newsyslog.d/reflink_dedupe.conf \
-	    ${STAGEDIR}/etc/newsyslog.conf.d/reflink_dedupe.conf
+		${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/reflink_dedupe.conf
 
 	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.conf \
-	    ${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
+		${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
 
 .include <bsd.port.mk>
