@@ -15,16 +15,16 @@ NO_BUILD=      yes
 NO_ARCH=       yes
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/reflink_dedupe \
+	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
 	    ${STAGEDIR}${PREFIX}/bin/reflink_dedupe
 
-	${INSTALL_SCRIPT} ${FILESDIR}/rc.d/reflink_dedupe \
+	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/reflink_dedupe \
 	    ${STAGEDIR}${PREFIX}/etc/rc.d/reflink_dedupe
 
-	${INSTALL_DATA} ${FILESDIR}/newsyslog.d/reflink_dedupe.conf \
+	${INSTALL_DATA} ${WRKSRC}/newsyslog.d/reflink_dedupe.conf \
 	    ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/reflink_dedupe.conf
 
-	${INSTALL_DATA} ${FILESDIR}/reflink_dedupe.conf \
+	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.conf \
 	    ${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
 
 .include <bsd.port.mk>

@@ -21,4 +21,4 @@ echo "OVERLAYS+= /usr/local/freebsd-ports" >> /etc/make.conf
 ```
 
 
-make -V DISTFILES -V MASTER_SITES -C /usr/ports makesum
+make makesum
