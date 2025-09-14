@@ -28,6 +28,12 @@ ZFS_DESC=            Enable support for zpool statistics monitoring in interacti
 
 
 do-install:
+	# Create required directories first
+	${MKDIR} ${STAGEDIR}/bin
+	${MKDIR} ${STAGEDIR}/etc/rc.d
+	${MKDIR} ${STAGEDIR}/etc/newsyslog.conf.d
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc  # optional if you install sample config under PREFIX
+
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
 	    ${STAGEDIR}/bin/reflink_dedupe
 
@@ -38,6 +44,6 @@ do-install:
 	    ${STAGEDIR}/etc/newsyslog.conf.d/reflink_dedupe.conf
 
 	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.conf \
-	    ${STAGEDIR}/etc/reflink_dedupe.conf.sample
+	    ${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
 
 .include <bsd.port.mk>
