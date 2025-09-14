@@ -27,6 +27,7 @@ ln -s /usr/local/freebsd-ports/devel/docopts /usr/ports/local/devel/docopts
 
 Build the package
 ```
+cd /usr/ports/local/sysutils/reflink_dedupe
 make makesum
 ```
 
