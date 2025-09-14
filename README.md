@@ -72,3 +72,9 @@ Install the package
 ```
 make install clean WITH_WATCHER=yes WITH_ZFS=yes
 ```
+
+Configure the utility
+```
+sudo cp /usr/local/etc/reflink_dedupe.conf.sample /etc/reflink_dedupe.conf
+<edit the config>
+```
