@@ -14,6 +14,8 @@ GH_TAGNAME=     v${PORTVERSION}
 NO_BUILD=      yes
 NO_ARCH=       yes
 
+RUN_DEPENDS=   docopts:devel/docopts
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
 	    ${STAGEDIR}${PREFIX}/bin/reflink_dedupe

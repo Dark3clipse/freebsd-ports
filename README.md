@@ -20,5 +20,12 @@ Enable port overlay:
 echo "OVERLAYS+= /usr/local/freebsd-ports" >> /etc/make.conf
 ```
 
-
+Build the package
+```
 make makesum
+```
+
+Install the package
+```
+make install clean
+```
