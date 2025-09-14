@@ -15,7 +15,6 @@ NO_BUILD=      yes
 NO_ARCH=       yes
 
 RUN_DEPENDS=   docopts:devel/docopts \
-               ${AWK}:lang/awk \
                sqlite3:databases/sqlite3 \
                parallel:sysutils/parallel
 
