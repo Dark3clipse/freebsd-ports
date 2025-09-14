@@ -15,6 +15,8 @@ NO_EXTRACT=     yes
 DISTFILES=     docopts_freebsd_amd64
 MASTER_SITES=  https://github.com/docopt/docopts/releases/download/v${DISTVERSION}/
 
+EXTRACT_ONLY_DISTFILES=
+
 PLIST_FILES=   bin/docopts
 
 do-install:
