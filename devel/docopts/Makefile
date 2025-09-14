@@ -11,11 +11,10 @@ ONLY_FOR_ARCHS= amd64
 NO_BUILD=       yes
 NO_CHECKSUM=    yes
 NO_EXTRACT=     yes
+EXTRACT_CMD=    true
 
 DISTFILES=     docopts_freebsd_amd64
 MASTER_SITES=  https://github.com/docopt/docopts/releases/download/v${DISTVERSION}/
-
-EXTRACT_ONLY_DISTFILES=
 
 PLIST_FILES=   bin/docopts
 
