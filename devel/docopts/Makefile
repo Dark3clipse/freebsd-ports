@@ -16,7 +16,7 @@ ONLY_FOR_ARCHS= amd64
 PLIST_FILES=   bin/docopts
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/docopts_freebsd_amd64 \
+	${INSTALL_PROGRAM} ${DISTDIR}/docopts_freebsd_amd64 \
 	    ${STAGEDIR}${PREFIX}/bin/docopts
 
 .include <bsd.port.mk>
