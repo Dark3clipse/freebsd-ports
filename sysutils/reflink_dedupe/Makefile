@@ -26,3 +26,5 @@ do-install:
 
 	${INSTALL_DATA} ${FILESDIR}/reflink_dedupe.conf \
 	    ${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
+
+.include <bsd.port.mk>
