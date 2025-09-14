@@ -14,7 +14,19 @@ GH_TAGNAME=     v${PORTVERSION}
 NO_BUILD=      yes
 NO_ARCH=       yes
 
-RUN_DEPENDS=   docopts:devel/docopts
+RUN_DEPENDS=   docopts:devel/docopts \
+               ${AWK}:lang/awk \
+               sqlite3:databases/sqlite3 \
+               parallel:sysutils/parallel
+
+OPTIONS_DEFINE=    WATCHER ZFS
+OPTIONS_DEFAULT=   WATCHER
+
+WATCHER_DESC=        Enable support for watching directories using fswatch for monitoring file changes and making reflinks on the go.
+WATCHER_RUN_DEPENDS= fswatch:sysutils/fswatch-mon
+
+ZFS_DESC=            Enable support for zpool statistics monitoring in interactive mode. (optional)
+
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
