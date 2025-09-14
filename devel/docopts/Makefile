@@ -7,10 +7,8 @@ MAINTAINER=    admin@mediarr.org
 COMMENT=       Command-line option parser for shell scripts
 LICENSE=       MIT
 
-USE_GITHUB=    yes
-GH_ACCOUNT=    docopt
-GH_PROJECT=    docopts
-GH_TAGNAME=    v${PORTVERSION}
+DISTFILES=     docopts_freebsd_amd64
+MASTER_SITES=  https://github.com/docopt/docopts/releases/download/v${DISTVERSION}/
 
 NO_BUILD=      yes
 ONLY_FOR_ARCHS= amd64
