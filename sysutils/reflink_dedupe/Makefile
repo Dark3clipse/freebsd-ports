@@ -29,15 +29,15 @@ ZFS_DESC=            Enable support for zpool statistics monitoring in interacti
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
-	    ${STAGEDIR}${PREFIX}/bin/reflink_dedupe
+	    ${STAGEDIR}/bin/reflink_dedupe
 
 	${INSTALL_SCRIPT} ${WRKSRC}/rc.d/reflink_dedupe \
-	    ${STAGEDIR}${PREFIX}/etc/rc.d/reflink_dedupe
+	    ${STAGEDIR}/etc/rc.d/reflink_dedupe
 
 	${INSTALL_DATA} ${WRKSRC}/newsyslog.d/reflink_dedupe.conf \
-	    ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d/reflink_dedupe.conf
+	    ${STAGEDIR}/etc/newsyslog.conf.d/reflink_dedupe.conf
 
 	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.conf \
-	    ${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
+	    ${STAGEDIR}/etc/reflink_dedupe.conf.sample
 
 .include <bsd.port.mk>
