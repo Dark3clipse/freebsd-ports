@@ -1,5 +1,1 @@
-reflink_dedupe is a tool to deduplicate files using
-reflinks on supported filesystems. It provides a
-command-line interface to identify duplicate files,
-replace them with reflinks, and optionally update
-associated configuration and log files.
+docopts is a command line wrapper for bash.

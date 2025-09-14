@@ -1,4 +1,1 @@
-bin/reflink_dedupe
-etc/rc.d/reflink_dedupe
-etc/newsyslog.conf.d/reflink_dedupe.conf
-etc/reflink_dedupe.conf.sample
+bin/docopts
