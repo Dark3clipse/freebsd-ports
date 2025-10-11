@@ -14,9 +14,9 @@ GH_TAGNAME=     v${PORTVERSION}
 NO_BUILD=      yes
 NO_ARCH=       yes
 
-RUN_DEPENDS=   python311:lang/python311 \
-               py311-pyserial:comms/py311-pyserial \
-               py311-psutil:comms/py311-psutil
+RUN_DEPENDS=   python3:lang/python311 \
+               comms/py311-pyserial \
+               comms/py311-psutil
 
 OPTIONS_DEFINE=
 OPTIONS_DEFAULT=

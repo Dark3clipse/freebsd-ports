@@ -69,6 +69,7 @@ echo "OVERLAYS+= /usr/local/freebsd-ports" >> /etc/make.conf
 
 mkdir -p /usr/ports/local/sysutils
 ln -s /usr/local/freebsd-ports/sysutils/reflink_dedupe /usr/ports/local/sysutils/reflink_dedupe
+ln -s /usr/local/freebsd-ports/sysutils/zmonitor /usr/ports/local/sysutils/zmonitor
 
 mkdir -p /usr/ports/local/devel
 ln -s /usr/local/freebsd-ports/devel/docopts /usr/ports/local/devel/docopts
