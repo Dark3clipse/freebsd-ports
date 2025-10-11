@@ -1,0 +1,17 @@
+zfs-prepare-disk: A utility to safely prepare disks for ZFS on FreeBSD
+
+zfs-prepare-disk is a command-line utility designed to simplify the
+preparation of disks for use with ZFS. It automates GPT partitioning
+and creation of a freebsd-zfs partition while providing safety checks
+and a dry-run mode to prevent accidental data loss.
+
+Features:
+  * Automatically generates a unique GPT label for each disk.
+  * Supports a dry-run mode for testing without making changes.
+  * Prompts the user for confirmation before destructive actions.
+  * Uses FreeBSD base utilities (gpart, dd) for disk operations.
+  * Easy to integrate into scripts or automated setups.
+
+Author: Sophia Hadash
+License: BSD 2-Clause License
+WWW: https://github.com/Dark3clipse/zfs-prepare-disk

@@ -14,7 +14,8 @@ GH_TAGNAME=     v${PORTVERSION}
 NO_BUILD=      yes
 NO_ARCH=       yes
 
-RUN_DEPENDS=   docopts:devel/docopts \
+RUN_DEPENDS=   bash:shells/bash \
+               docopts:devel/docopts \
                sqlite3:databases/sqlite3 \
                parallel:sysutils/parallel
 
