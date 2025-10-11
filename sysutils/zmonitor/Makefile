@@ -14,9 +14,12 @@ GH_TAGNAME=     v${PORTVERSION}
 NO_BUILD=      yes
 NO_ARCH=       yes
 
-RUN_DEPENDS=   python3:lang/python311 \
-               comms/py311-pyserial \
-               comms/py311-psutil
+USES=          python:run shebangfix
+SHEBANG_FILES= zmonitor.py
+
+RUN_DEPENDS=   ${PYTHON_PKGNAMEPREFIX}psutil>=0:sysutils/py-psutil@${PY_FLAVOR}
+               ${PYTHON_PKGNAMEPREFIX}pyserial>=3.5:comms/py-pyserial@${PY_FLAVOR}
+
 
 OPTIONS_DEFINE=
 OPTIONS_DEFAULT=
