@@ -1,0 +1,16 @@
+list-disks is a lightweight FreeBSD shell utility that enumerates all system disks
+with detailed information, including:
+
+  • Device name, serial number, and model
+  • Disk capacity and partition table type
+  • Partition list and associated GPT labels
+  • ZFS pool membership (mapped via GPT or partition device)
+
+It integrates with the FreeBSD base tools (gpart, glabel, zpool, diskinfo)
+and smartmontools to provide a comprehensive disk overview suitable for
+administration scripts, diagnostics, or inventory reporting.
+
+The utility produces neatly aligned, human-readable tabular output and
+requires no configuration.
+
+WWW: https://github.com/Dark3clipse/lsdisks

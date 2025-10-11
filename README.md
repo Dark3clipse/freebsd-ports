@@ -46,6 +46,18 @@ The source code for `zmonitor` is available at:
 
 `zmonitor` is licensed under the **BSD 2-Clause License (BSD2CLAUSE)**.
 
+## 4. `lsdisks` (sysutils/lsdisks)
+
+`lsdisks` is a FreeBSD utility for listing disks, partitions, and associated zpools.  
+
+### Source Code
+
+The source code for `lsdisks` is available at:  
+[https://github.com/Dark3clipse/lsdisks](https://github.com/Dark3clipse/lsdisks)
+
+### License
+
+`lsdisks` is licensed under the **BSD 2-Clause License (BSD2CLAUSE)**.
 ---
 
 ## Installing the Ports
@@ -70,6 +82,7 @@ echo "OVERLAYS+= /usr/local/freebsd-ports" >> /etc/make.conf
 mkdir -p /usr/ports/local/sysutils
 ln -s /usr/local/freebsd-ports/sysutils/reflink_dedupe /usr/ports/local/sysutils/reflink_dedupe
 ln -s /usr/local/freebsd-ports/sysutils/zmonitor /usr/ports/local/sysutils/zmonitor
+ln -s /usr/local/freebsd-ports/sysutils/lsdisks /usr/ports/local/sysutils/lsdisks
 
 mkdir -p /usr/ports/local/devel
 ln -s /usr/local/freebsd-ports/devel/docopts /usr/ports/local/devel/docopts
