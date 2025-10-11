@@ -1,0 +1,3 @@
+bin/zmonitor.py
+etc/rc.d/zmonitor
+etc/zmonitor.conf.sample

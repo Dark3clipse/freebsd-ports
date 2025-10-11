@@ -33,6 +33,19 @@ The source code for `reflink_dedupe` is available at:
 
 `reflink_dedupe` is licensed under the **BSD 2-Clause License (BSD2CLAUSE)**.
 
+## 3. `zmonitor` (sysutils/zmonitor)
+
+`zmonitor` is a FreeBSD utility for sending node utilization and zpool statistics over a serial connection.  
+
+### Source Code
+
+The source code for `zmonitor` is available at:  
+[https://github.com/Dark3clipse/zmonitor](https://github.com/Dark3clipse/zmonitor)
+
+### License
+
+`zmonitor` is licensed under the **BSD 2-Clause License (BSD2CLAUSE)**.
+
 ---
 
 ## Installing the Ports

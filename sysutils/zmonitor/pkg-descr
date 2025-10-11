@@ -1,0 +1,15 @@
+ZMonitor is a lightweight Python-based utility designed for FreeBSD systems to
+monitor ZFS pool health and performance metrics in real time.
+
+It periodically collects and transmits system and ZFS statistics — including
+CPU usage, memory utilization, read/write throughput, and disk error counts —
+to a serial-connected display or external controller. The tool is also capable
+of running in a configurable "dry run" mode, which prints metrics to standard
+output instead of writing to the serial interface, making it ideal for testing
+and debugging.
+
+ZMonitor automatically detects and handles serial device attach/detach events
+(e.g. /dev/cuaU0), reads configuration from
+/usr/local/etc/zmonitor.conf, and gracefully shuts down on system signals.
+
+WWW: https://github.com/Dark3clipse/zmonitor
