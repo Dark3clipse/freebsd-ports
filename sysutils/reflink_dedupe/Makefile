@@ -1,5 +1,5 @@
 PORTNAME=      reflink_dedupe
-PORTVERSION=   0.9.0
+PORTVERSION=   0.9.1
 CATEGORIES=    sysutils
 
 MAINTAINER=     admin@mediarr.org
@@ -31,9 +31,10 @@ ZFS_DESC=            Enable support for zpool statistics monitoring in interacti
 do-install:
 	# Create staging directories
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/rc.d
 	${MKDIR} ${STAGEDIR}${PREFIX}/etc/newsyslog.conf.d
-	${MKDIR} ${STAGEDIR}${PREFIX}/etc
+	${MKDIR} ${STAGEDIR}${PREFIX}/etc/cron.d
 
 	# Install files under ${PREFIX}
 	${INSTALL_SCRIPT} ${WRKSRC}/reflink_dedupe \
@@ -47,5 +48,10 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.conf \
 		${STAGEDIR}${PREFIX}/etc/reflink_dedupe.conf.sample
+
+	${INSTALL_DATA} ${WRKSRC}/reflink_dedupe.cron \
+		${STAGEDIR}${PREFIX}/etc/cron.d/reflink_dedupe.cron
+	${CHOWN} root:wheel ${STAGEDIR}${PREFIX}/etc/cron.d/reflink_dedupe.cron
+	${CHMOD} 0644 ${STAGEDIR}${PREFIX}/etc/cron.d/reflink_dedupe.cron
 
 .include <bsd.port.mk>
