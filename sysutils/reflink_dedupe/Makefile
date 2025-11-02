@@ -1,5 +1,5 @@
 PORTNAME=      reflink_dedupe
-PORTVERSION=   0.9.2
+PORTVERSION=   0.9.3
 CATEGORIES=    sysutils
 
 MAINTAINER=     admin@mediarr.org
